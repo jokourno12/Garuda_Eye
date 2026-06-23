@@ -411,6 +411,5 @@ else {
         } -ThrottleLimit 15
     }
 }
-foreach ($r in $result){
-    $r.Values
-}
+
+$result.Values
