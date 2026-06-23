@@ -100,9 +100,17 @@ Checks if a host or subnet is alive and reachable.
 
 ### Example 7: With Verbose Output
 ```powershell
-.\portsScan.ps1 -targets 10.34.56.66 -verbose *> test.txt
+.\garuda-eye.ps1 -targets 10.34.56.66 -verbose *> test.txt
 ```
 **Description:** Will include the output of each port scanned verbosely indicating open or closed. Also redirects output to `test.txt`.
+
+---
+
+### Example 8: With Information Action (Debug Info)
+```powershell
+.\garuda-eye.ps1 -targets 8.8.8.8 -quickScan -InformationAction Continue
+```
+**Description:** Shows debugging information (parameters used) along with scan results.
 
 ---
 
