@@ -19,6 +19,14 @@ Garuda Eye is a PowerShell-based, multithreaded, designed for network port scann
 - **PowerShell 5.0 or later**: The script requires at least PowerShell version 5.0, which is included in most recent Windows installations.
 - **No external dependencies**: The script operates independently, without the need for additional tools or modules.
 
+## Color Indicators
+
+- **Yellow**: Blockchain.
+- **Red**: Vulnerability Assessment and Penetration Testing.
+- **Magenta**: Incident Handling and Response.
+- **Blue**: Network Defense.
+- **Green**: Application Security.
+
 ## Installation
 
 Clone the repository or download the scripts directly:
