@@ -37,7 +37,7 @@ function Get-WebPorts {
 
 function get-Version {
     $localModulePath = "$PSScriptRoot\garuda-eye.psd1"
-    $remoteModuleUrl = "https://raw.githubusercontent.com/tekshteint/Pmap/main/garuda-eye.psd1"
+    $remoteModuleUrl = "https://raw.githubusercontent.com/jokourno12/Garuda_Eye/main/garuda-eye.psd1"
 
     $localModule = Import-PowerShellDataFile -Path $localModulePath
     $localVersion = [version]$localModule.ModuleVersion

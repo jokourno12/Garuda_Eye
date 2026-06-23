@@ -147,7 +147,7 @@ if ($discover) {
             
             foreach ($ip in $reachableTargets.Keys) {
                 if ($reachableTargets[$ip] -eq $true) {
-                    Write-Host "$ip is reachable" -ForegroundColor Green
+                    Write-Host "$ip is reachable" -ForegroundColor Red
                 } else {
                     Write-Verbose "$ip is not reachable"
                 }
@@ -155,19 +155,19 @@ if ($discover) {
 
         } else {
             if (Test-Connection -ComputerName $target -Count 2.5 -Quiet) {
-                Write-Host "`n$target is reachable" -ForegroundColor Green
+                Write-Host "`n$target is reachable" -ForegroundColor Red
                 exit
             } else {
-                Write-Host "`n$target is not reachable" -ForegroundColor Red
+                Write-Host "`n$target is not reachable" -ForegroundColor Blue
                 exit
             }
         }
     }
     if ($VerbosePreference) {
-        Write-Host "VERBOSE: " -NoNewline -ForegroundColor Yellow
+        Write-Host "VERBOSE: " -NoNewline -ForegroundColor Red
         foreach ($ip in $reachableTargets.Keys) {
             if ($reachableTargets[$ip] -eq $true) {
-                Write-Host "$ip," -NoNewline -ForegroundColor Yellow
+                Write-Host "$ip," -NoNewline -ForegroundColor Red
             }
     }
 }
