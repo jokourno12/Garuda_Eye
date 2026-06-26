@@ -39,7 +39,7 @@ git clone https://github.com/jokourno12/Garuda_Eye.git
 ### Full port scan of multiple targets
 `.\garuda-eye.ps1 -targets 10.34.56.66,10.34.56.67`
 
-### Quick scan of the top 1000 most common ports on a single target
+### Quick scan using the predefined common port list
 `.\garuda-eye.ps1 -targets 10.34.56.66 -quickScan`
 
 ### Scan a custom port range (1024 to 2000) on a single target
@@ -48,11 +48,14 @@ git clone https://github.com/jokourno12/Garuda_Eye.git
 ### Scan specific ports on a single target
 `.\garuda-eye.ps1 -targets 10.34.56.66 -ports 21,22,23,25,80,443,8080,8443`
 
-### Verbose output of each port’s status; redirects output to a text file
-`.\garuda-eye.ps1 -targets 10.34.56.66 -verbose *> output.txt`
-
-### Check if a target is alive
+### Check whether a host is reachable
 `.\garuda-eye.ps1 -targets 10.34.56.66 -discover`
 
-### Scan a range of IPs to see what is or isn't alive
-`.\garuda-eye.ps1 -targets 192.168.1.1/24 -discover -verbose`
+### Discover live hosts in a subnet
+`.\garuda-eye.ps1 -targets 192.168.1.0/24 -discover`
+
+### Generate verbose output and redirect it to a text file
+`.\garuda-eye.ps1 -targets 10.34.56.66 -Verbose *> test.txt`
+
+### Display debugging information with scan results
+`.\garuda-eye.ps1 -targets 8.8.8.8 -quickScan -InformationAction Continue`
