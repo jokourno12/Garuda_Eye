@@ -219,11 +219,11 @@ if ($quickScan) {
 
                 # Result Object Builder
                 $r = New-Object -type psobject
-                $r | Add-Member -MemberType NoteProperty -name host -value $Target
-                $r | Add-Member -MemberType NoteProperty -name port -value $port
-                $r | Add-Member -MemberType NoteProperty -name state -value $value
+                $r | Add-Member -MemberType NoteProperty -name Host -value $Target
+                $r | Add-Member -MemberType NoteProperty -name Port -value $port
+                $r | Add-Member -MemberType NoteProperty -name State -value $value
                 $r | Add-Member -MemberType NoteProperty -name Service -value $Service[0]
-                $r | Add-Member -MemberType NoteProperty -name Descrption -value $Service[1]
+                $r | Add-Member -MemberType NoteProperty -name Description -value $Service[1]
 
                 $key = $Target + ":" + $port
 
@@ -272,11 +272,11 @@ elseif ($ports -ne "") {
 
                 # Result Object Builder
                 $r = New-Object -type psobject
-                $r | Add-Member -MemberType NoteProperty -name host -value $Target
-                $r | Add-Member -MemberType NoteProperty -name port -value $port
-                $r | Add-Member -MemberType NoteProperty -name state -value $value
+                $r | Add-Member -MemberType NoteProperty -name Host -value $Target
+                $r | Add-Member -MemberType NoteProperty -name Port -value $port
+                $r | Add-Member -MemberType NoteProperty -name State -value $value
                 $r | Add-Member -MemberType NoteProperty -name Service -value $Service[0]
-                $r | Add-Member -MemberType NoteProperty -name Descrption -value $Service[1]
+                $r | Add-Member -MemberType NoteProperty -name Description -value $Service[1]
 
                 $key = $Target + ":" + $port
 
@@ -333,11 +333,11 @@ else {
 
                 # Result Object Builder
                 $r = New-Object -type psobject
-                $r | Add-Member -MemberType NoteProperty -name host -value $Target
-                $r | Add-Member -MemberType NoteProperty -name port -value $port
-                $r | Add-Member -MemberType NoteProperty -name state -value $value
+                $r | Add-Member -MemberType NoteProperty -name Host -value $Target
+                $r | Add-Member -MemberType NoteProperty -name Port -value $port
+                $r | Add-Member -MemberType NoteProperty -name State -value $value
                 $r | Add-Member -MemberType NoteProperty -name Service -value $Service[0]
-                $r | Add-Member -MemberType NoteProperty -name Descrption -value $Service[1]
+                $r | Add-Member -MemberType NoteProperty -name Description -value $Service[1]
 
                 $key = $Target + ":" + $port
 
@@ -350,4 +350,4 @@ else {
 }
 
 # OUTPUT RENDERER
-$result.Values
+$result.Values | Sort-Object host, port | Format-Table -AutoSize
