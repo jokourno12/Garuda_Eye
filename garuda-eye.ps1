@@ -21,7 +21,7 @@ param(
 $banner =
 "                      
 =======================================
-          G A R U D A   E Y E
+       G A R U D A   S E N S E S
                   v1.0
 =======================================
      [ SECURITY OBSERVATION TOOL ]
