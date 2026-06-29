@@ -223,7 +223,7 @@ if ($quickScan) {
                 $r | Add-Member -MemberType NoteProperty -name Port -value $port
                 $r | Add-Member -MemberType NoteProperty -name State -value $value
                 $r | Add-Member -MemberType NoteProperty -name Service -value $Service[0]
-                $r | Add-Member -MemberType NoteProperty -name IANA Standard Description -value $Service[1]
+                $r | Add-Member -MemberType NoteProperty -name "IANA Standard Description" -value $Service[1]
 
                 $key = $Target + ":" + $port
 
@@ -276,7 +276,7 @@ elseif ($ports -ne "") {
                 $r | Add-Member -MemberType NoteProperty -name Port -value $port
                 $r | Add-Member -MemberType NoteProperty -name State -value $value
                 $r | Add-Member -MemberType NoteProperty -name Service -value $Service[0]
-                $r | Add-Member -MemberType NoteProperty -name IANA Standard Description -value $Service[1]
+                $r | Add-Member -MemberType NoteProperty -name "IANA Standard Description" -value $Service[1]
 
                 $key = $Target + ":" + $port
 
@@ -337,7 +337,7 @@ else {
                 $r | Add-Member -MemberType NoteProperty -name Port -value $port
                 $r | Add-Member -MemberType NoteProperty -name State -value $value
                 $r | Add-Member -MemberType NoteProperty -name Service -value $Service[0]
-                $r | Add-Member -MemberType NoteProperty -name IANA Standard Description -value $Service[1]
+                $r | Add-Member -MemberType NoteProperty -name "IANA Standard Description" -value $Service[1]
 
                 $key = $Target + ":" + $port
 
