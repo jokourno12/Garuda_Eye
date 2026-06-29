@@ -3,21 +3,21 @@
 
 ![demo](demos/demo-garuda-eye.gif)
 
-Garuda Eye is a PowerShell-based, multithreaded, designed for network port scanning without requiring elevated privileges. This tool is ideal for environments where Network Mapper is unavailable or restricted, but PowerShell is accessible.
+Garuda Sense is a PowerShell-based, multithreaded platform for probing remote hosts and identifying open TCP ports without requiring elevated privileges.
 
 ## Features
 
-- **Multithreaded Scanning**: Utilizes multithreading to perform scans efficiently.
-- **Flexible Targeting**: Scan one or multiple IP addresses (comma-separated).
-- **Quick and Full Scans**: Options for scanning the top 1000 most common ports, a full range (1-65535), or custom ranges.
-- **Customizable Scanning**: Define specific ports or ranges to scan using various command-line flags.
-- **Verbose Output**: Option to display each port's open or closed status.
-- **Platform Compatibility**: Works on any Windows machine with PowerShell, making it a versatile tool for restricted environments.
+- **Multithreaded Scanning**: Fast parallel host and port scanning.
+- **Host Discovery**: Detects reachable hosts, including CIDR subnet support.
+- **Flexible Targeting**: Scan single, multiple, or subnet targets.
+- **Multiple Scan Modes**: Quick, full, or custom port scanning.
+- **Service Detection**: Identifies services using the IANA port database.
+- **PowerShell Native**: Runs without administrative privileges or external dependencies.
 
 ## Requirements
 
-- **PowerShell 5.0 or later**: The script requires at least PowerShell version 5.0, which is included in most recent Windows installations.
-- **No external dependencies**: The script operates independently, without the need for additional tools or modules.
+- **PowerShell 7.6.3 or later**
+- **Currently does not rely on additional dependencies**
 
 ## Color Indicators
 
